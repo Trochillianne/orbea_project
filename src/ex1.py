@@ -12,7 +12,7 @@ def load_dataset(filepath):
         pd.DataFrame: DataFrame con los datos cargados.
     """
     try:
-        df = pd.read_csv(filepath)
+        df = pd.read_csv(filepath, sep=';')
         print("Dataset cargado correctamente.")
         return df
     except FileNotFoundError:
