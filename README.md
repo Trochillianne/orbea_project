@@ -86,6 +86,12 @@ python -m unittest discover -s tests
 
 Esto ejecutará todas las pruebas en el directorio `tests/` y mostrará un informe en la terminal.
 
+## Repositorio en GitHub
+El código fuente de este proyecto también se encuentra disponible en el repositorio público de GitHub:  
+[https://github.com/Trochillianne/orbea_project](https://github.com/Trochillianne/orbea_project)
+
+Este repositorio contiene la misma estructura y archivos que se incluyen en el archivo ZIP entregado
+
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.

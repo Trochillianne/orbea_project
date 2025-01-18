@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Ignoramos carpetas específicas
+venv/
+.idea/
+__pycache__/
+dist/
+
+# Ignoramos archivos específicos
+*.pyc
