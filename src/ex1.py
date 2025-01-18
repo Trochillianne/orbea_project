@@ -3,7 +3,7 @@ import pandas as pd
 
 def load_dataset(filepath):
     """
-    Carga el dataset desde un archivo CSV a un DataFrame.
+    Cargamos el dataset desde un CSV a un DF
 
     Args:
         filepath (str): Ruta del archivo CSV.
@@ -39,4 +39,4 @@ def display_dataset_info(df):
         print("\nColumnas del dataset:")
         print(list(df.columns))
     else:
-        print("El DataFrame está vacío o no se cargó correctamente.")
+        print("El DataFrame está vacío o no se cargó correctamente")

@@ -1,8 +1,18 @@
-# Orbea Project 🚴‍♂️
+# Orbea Project
 
-Este proyecto tiene como objetivo analizar datos de una prueba ciclista. A través de varios ejercicios, realizamos tareas como limpieza y anonimización de datos, análisis de tiempos, agrupaciones, y visualizaciones. 
+Este proyecto analiza datos de una prueba ciclistica, proporcionando información sobre los participantes, tiempos y clubes ciclistas.
+Además, se implementan procesos para limpiar y estructurar datos, generar estadísticas y visualizar datos. 
 
-## Ejercicios incluidos
+## **Estructura del Proyecto**
+- **`src/`**: Contiene los scripts principales (`ex1.py`, `ex2.py`, ..., `ex5.py`).
+- **`main.py`**: Script principal para ejecutar los ejercicios.
+- **`tests/`**: Pruebas unitarias para validar las funcionalidades.
+- **`data/`**: Archivos de datos utilizados en el proyecto (`dataset.csv`como dataset original y `club_counts.csv`como resultado del análisis de clubes).
+- **`img/`**: Imágenes generadas como parte de los resultados (por ejemplo, histogramas).
+- **`requirements.txt`**: Librerías necesarias para ejecutar el proyecto.
+- **`LICENSE`**: Licencia del proyecto.
+
+## Descripción de los ejercicios
 
 1. **Importación y exploración de datos**:
    - Carga del dataset desde un archivo CSV.
@@ -23,7 +33,7 @@ Este proyecto tiene como objetivo analizar datos de una prueba ciclista. A trav�
 5. **Análisis del club UCSC**:
    - Identificación de los ciclistas del club UCSC.
    - Determinación del ciclista más rápido y su posición en el ranking global.
-
+   
 ## Requisitos del proyecto
 
 Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
@@ -31,9 +41,9 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
 - Python 3.12 o superior.
 - Entorno virtual configurado con las dependencias del archivo `requirements.txt`.
 
-### Instalación
+### Instrucciones de instalación
 
-1. Clona este repositorio en tu máquina local:
+1. Clona este repositorio desde GitHub:
    ```bash
    git clone https://github.com/Trochillianne/orbea_project.git
    cd orbea_project
@@ -42,49 +52,40 @@ Antes de ejecutar el proyecto, asegúrate de tener instalado lo siguiente:
 2. Crea y activa un entorno virtual:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   source venv/bin/activate     # En Windows: venv\Scripts\activate
    ```
 
 3. Instala las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
+   
+3. Instala setup:
+   ```bash
+   python setup.py install
+   ```
 
 ### Ejecución
 
-1. Ejecuta el script principal para realizar todos los análisis:
+1. Para ejecutar todos los ejercicios, ejecuta el script principal:
    ```bash
    python main.py
    ```
 
-2. Los resultados se guardarán en:
+2. Cada ejercicio generará salidas específicas en la terminal y, los archivos de datos o imágenes en las siguientes carpetas: 
    - **Ejercicio 3 (Histograma)**: `img/histograma.png`
    - **Ejercicio 4 (Conteo de clubes)**: `data/club_counts.csv`
 
-### Estructura del proyecto
+## Tests
 
-```plaintext
-orbea_project/
-|
-├── data/
-│   ├── dataset.csv         # Dataset original
-│   ├── club_counts.csv     # Resultados del análisis de clubes
-│
-├── img/
-│   ├── histograma.png      # Histograma generado
-│
-├── src/
-│   ├── ex1.py              # Ejercicio 1: Importación y exploración
-│   ├── ex2.py              # Ejercicio 2: Anonimización y limpieza
-│   ├── ex3.py              # Ejercicio 3: Agrupamiento y histograma
-│   ├── ex4.py              # Ejercicio 4: Limpieza de clubes
-│   ├── ex5.py              # Ejercicio 5: Análisis del UCSC
-│
-├── main.py                 # Script principal
-├── requirements.txt        # Dependencias del proyecto
-├── README.md               # Información del proyecto
+Para ejecutar las pruebas unitarias, ejecútalo desde la raíz del proyecto
+
+```bash
+python -m unittest discover -s tests
 ```
 
-### Contribución
+Esto ejecutará todas las pruebas en el directorio `tests/` y mostrará un informe en la terminal.
 
-Si deseas colaborar en este proyecto, por favor abre un `pull request` o contacta con el autor principal.
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.

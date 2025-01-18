@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/orbea_project.egg-info/PKG-INFO
+src/orbea_project.egg-info/SOURCES.txt
+src/orbea_project.egg-info/dependency_links.txt
+src/orbea_project.egg-info/entry_points.txt
+src/orbea_project.egg-info/requires.txt
+src/orbea_project.egg-info/top_level.txt
+tests/test_main.py

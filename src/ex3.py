@@ -4,7 +4,7 @@ import pandas as pd
 
 def minutes_002040(time):
     """
-    Redondea los minutos del tiempo a 00, 20 o 40.
+    Redondeamos los minutos del tiempo a 00, 20 o 40.
 
     Args:
         time (str): Tiempo en formato 'hh:mm:ss'.
@@ -24,21 +24,21 @@ def minutes_002040(time):
 
 def group_and_plot_times(df, output_path="img/histograma.png"):
     """
-    Agrupa los tiempos en franjas de 20 minutos y genera un histograma.
+    Agrupamos los tiempos en franjas de 20 minutos y generamos un histograma
 
     Args:
-        df (pd.DataFrame): DataFrame con los datos, incluyendo la columna 'time'.
-        output_path (str): Ruta para guardar el histograma generado.
+        df (pd.DataFrame): DF con los datos, incluyendo la columna 'time'
+        output_path (str): Ruta para guardar el histograma generado
     """
-    # Crear la columna 'time_grouped'
+    # Creamos la columna 'time_grouped'
     df['time_grouped'] = df['time'].apply(minutes_002040)
 
-    # Agrupar por 'time_grouped' y contar
+    # Agrupamos por 'time_grouped' y contar
     grouped = df.groupby('time_grouped').size().reset_index(name='count')
     print("\nAgrupamiento por tiempos:")
     print(grouped)
 
-    # Crear el histograma
+    # Creamos el histograma
     plt.figure(figsize=(10, 6))
     plt.bar(grouped['time_grouped'], grouped['count'], width=0.4)
     plt.title('Histograma de tiempos agrupados')
@@ -47,6 +47,6 @@ def group_and_plot_times(df, output_path="img/histograma.png"):
     plt.xticks(rotation=45)
     plt.tight_layout()
 
-    # Guardar el histograma
+    # Guardamos el histograma
     plt.savefig(output_path)
     print(f"Histograma guardado en {output_path}")

@@ -4,6 +4,16 @@ from src.ex3 import group_and_plot_times
 from src.ex4 import clean_club
 from src.ex5 import get_ucsc_cyclists, best_ucsc_cyclist, cyclist_position_and_percentage
 
+"""
+Este script organiza y ejecuta los ejercicios relacionados con el análisis de datos de pruebas ciclistas.
+
+Cada ejercicio está implementado en módulos separados (ex1.py, ex2.py, etc.) y realiza tareas específicas:
+1. Importación y exploración del dataset.
+2. Anonimización y limpieza de datos.
+3. Agrupación y generación de histogramas.
+4. Limpieza y conteo de datos de clubes ciclistas.
+5. Filtrado y análisis de datos de un club específico (UCSC).
+"""
 
 if __name__ == "__main__":
     # --- EJERCICIO 1: Importación y exploración del dataset ---
@@ -12,7 +22,7 @@ if __name__ == "__main__":
     # Ruta al dataset
     dataset_path = "data/dataset.csv"
 
-    # Cargamos el dataset
+    # Cargamos el dataset desde un CSV
     print("\nCargando el dataset...")
     dataset = load_dataset(dataset_path)
 
@@ -99,3 +109,4 @@ if __name__ == "__main__":
     position, percentage = cyclist_position_and_percentage(dataset, best_cyclist['dorsal'])
     print(f"Posición: {position} de {len(dataset)}, Porcentaje: {percentage:.2f}%")
 
+    print("\nEjecución completada exitosamente. Ahora toca revisar los resultados ;)")
